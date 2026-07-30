@@ -118,11 +118,11 @@ const ProjectDetails = () => {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary inline-flex items-center gap-3 px-6 py-3 text-white font-bold rounded-xl shadow-lg hover:scale-105 transition-all"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-5 py-3.5 bg-picto-primary hover:bg-picto-primary-dark text-white font-bold rounded-xl shadow-lg hover:scale-[102%] transition-all text-sm sm:text-base text-center whitespace-normal leading-snug"
             >
-              <FontAwesomeIcon icon={faGithub} className="text-xl" />
-              View GitHub Repository
-              <FontAwesomeIcon icon={faArrowRight} className="text-xs" />
+              <FontAwesomeIcon icon={faGithub} className="text-lg sm:text-xl shrink-0" />
+              <span>View GitHub Repository</span>
+              <FontAwesomeIcon icon={faArrowRight} className="text-xs shrink-0" />
             </a>
           </div>
 
@@ -247,15 +247,15 @@ const ProjectDetails = () => {
           </div>
 
           {/* Bottom GitHub Button */}
-          <div className="text-center pt-8 border-t border-gray-100">
+          <div className="text-center pt-8 border-t border-gray-100 flex justify-center">
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary px-8 py-4 text-white font-bold text-lg rounded-xl shadow-lg hover:scale-105 transition-all inline-flex items-center gap-3"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 bg-picto-primary hover:bg-picto-primary-dark text-white font-bold text-sm sm:text-base md:text-lg rounded-xl shadow-lg hover:scale-[102%] transition-all text-center whitespace-normal leading-snug max-w-full"
             >
-              <FontAwesomeIcon icon={faGithub} className="text-2xl" />
-              Explore Code & Datasets on GitHub
+              <FontAwesomeIcon icon={faGithub} className="text-xl sm:text-2xl shrink-0" />
+              <span className="text-center">Explore Code & Datasets on GitHub</span>
             </a>
           </div>
 
