@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Introduction from "../components/introduction/Introduction";
 import Profile from "../components/profile/Profile";
 import WorkProcess from "../components/workProcess/WorkProcess";
@@ -28,6 +30,19 @@ const Section = ({ children, className }) => (
 );
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "instant" });
+        }, 50);
+      }
+    }
+  }, [location]);
   return (
     <div className="relative overflow-hidden">
       <div className="introduction-profile-background">

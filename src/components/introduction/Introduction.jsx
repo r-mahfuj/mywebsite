@@ -1,6 +1,7 @@
 import person from "../../assets/images/academic_headshot.png";
 import "./introduction.css";
 import InformationSummary from "./InformationSummary";
+import SocialMedia from "../common/socialMedia/SocialMedia";
 
 // Information summary data
 const informationSummaryData = [
@@ -36,20 +37,22 @@ const Introduction = () => {
             </span>
           </p>
           <p className="text-xs xxs:text-lg lg:text-[18px] my-6">
-            I am a <span className="bg-highlight">2nd-Year Undergraduate</span>{" "}
-            studying Materials and Metallurgical Engineering at BUET, based in
+            I am a 2nd-Year Undergraduate studying Materials and Metallurgical Engineering at BUET, based in
             Dhaka, Bangladesh. I strive to discover and synthesize novel materials
             to solve critical challenges in sustainable energy storage.
           </p>
-          <p className="text-center lg:text-start">
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
             <a
-              className="btn btn-primary text-white max-sm:btn-md sm:btn-lg"
+              className="btn btn-primary text-white max-sm:btn-md sm:btn-lg shadow-lg hover:scale-105 transition-all"
               href="#!"
               download
             >
               Download CV
             </a>
-          </p>
+            <div className="flex items-center gap-1 bg-white p-1 rounded-lg shadow-sm border border-gray-100">
+              <SocialMedia />
+            </div>
+          </div>
         </div>
         <div className="mx-auto lg:mx-0 relative">
           <div className="grid max-xxs:grid-flow-col grid-cols-3 w-fit mt-10 gap-1">

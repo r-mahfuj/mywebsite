@@ -26,7 +26,7 @@ const Projects = ({ data }) => {
           >
             View Details
             <span className="ms-1 xs:ms-3">
-              <FontAwesomeIcon icon={faArrowRight} size="l" />
+              <FontAwesomeIcon icon={faArrowRight} />
             </span>
           </Link>
         ) : (
@@ -38,7 +38,7 @@ const Projects = ({ data }) => {
           >
             View Details
             <span className="ms-1 xs:ms-3">
-              <FontAwesomeIcon icon={faArrowRight} size="l" />
+              <FontAwesomeIcon icon={faArrowRight} />
             </span>
           </a>
         )}

@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { blogData } from "../components/blog/blogData";
 import MonoBlog from "../components/blog/MonoBlog";
 
@@ -13,8 +16,16 @@ const Conferences = () => {
   );
 
   return (
-    <div className="bg-soft-white min-h-screen pt-30 pb-20">
-      <div className="content px-4">
+    <div className="bg-soft-white min-h-screen pt-28 pb-20">
+      <div className="content px-4 max-w-6xl mx-auto">
+        {/* Back Link */}
+        <Link
+          to="/#blog"
+          className="inline-flex items-center gap-2 text-picto-primary font-semibold hover:underline mb-8"
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+          Back to Publications
+        </Link>
         <div className="text-center mb-16">
           <p className="text-[#48CFCB] font-bold tracking-wider uppercase text-sm mb-2">
             Publications

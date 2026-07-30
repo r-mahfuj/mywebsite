@@ -1,66 +1,66 @@
-import person from "../../assets/images/academic_headshot.png";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import SocialMedia from "../common/socialMedia/SocialMedia";
+import { faAtom, faFlask, faGraduationCap, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
   return (
     <div
-      className={`relative mx-4 xxl:mx-0.5 -bottom-20 lg:-bottom-28 z-10 rounded-2xl bg-white drop-shadow-2xl max-xl:mb-5 shadow-white xl:p-28 lg:p-20 md:p-16 sm:p-10 p-4`}
+      className="relative mx-4 xxl:mx-auto max-w-5xl -bottom-16 lg:-bottom-24 z-10 rounded-2xl bg-white shadow-2xl p-6 md:p-12 border border-gray-100"
       id="profile"
     >
-      <div className="flex max-md:flex-col justify-between items-center gap-6">
-        {/* Profile image */}
-        <div className="xxl:max-w-106 w-auto h-auto xxl:max-h-126">
-          <div className="max-w-106 h-117 object-fill overflow-hidden rounded-xl">
-            <img
-              className="bg-soft-white h-[120%] object-cover"
-              src={person}
-              alt=""
-            />
+      <div className="text-center mb-8">
+        <p className="text-picto-primary font-bold uppercase tracking-wider text-xs md:text-sm mb-2">
+          Research Focus & Academic Goals
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+          Bridging Computational Physics & Materials Discovery
+        </h2>
+        <div className="w-16 h-1 bg-picto-primary mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+        {/* Pillar 1 */}
+        <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl bg-purple-100 text-picto-primary flex items-center justify-center mb-4 text-xl">
+            <FontAwesomeIcon icon={faAtom} />
           </div>
-          {/* Social media section */}
-          <div className="relative bottom-9">
-            <div className="flex justify-center">
-              <div className="px-6 max-w-66 py-3 z-50 text-center bg-white rounded-[4px] center shadow-2xl drop-shadow-2xl shadow-white">
-                <SocialMedia />
-              </div>
-            </div>
-          </div>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Computational Materials & ML</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Developing high-throughput Density Functional Theory (Quantum Espresso) workflows and XGBoost machine learning surrogate models for SiGe semiconductor alloy screening.
+          </p>
         </div>
 
-        <div className="max-sm:w-full w-[33rem]">
-          <h2
-            className={`text-2xl xxs:text-3xl sm:text-4xl lg:text-[38px] text-[min(24px,38px)] max-md:text-center font-semibold mb-8`}
-          >
-            I am a Passionate Material Science Researcher
-          </h2>
-          <div
-            className={`text-xs xs:text-[16px] lg:text-lg font-normal max-md:text-center text-gray-600`}
-          >
-            <p className={``}>
-              I am currently in my second year pursuing a B.Sc. in Materials and Metallurgical Engineering at the Bangladesh University of Engineering and Technology (BUET). My research interests focus on the intersection of nanomaterials, polymer composites, and advanced characterization techniques.
-            </p>
-            <p className="mt-3">
-              I am actively seeking research internships and future PhD funding opportunities to further investigate next-generation solid-state battery materials and scalable synthesis methods.
-            </p>
+        {/* Pillar 2 */}
+        <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl bg-purple-100 text-picto-primary flex items-center justify-center mb-4 text-xl">
+            <FontAwesomeIcon icon={faFlask} />
           </div>
-          <div className="mt-8 flex max-md:justify-center">
-            <a
-              className="btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 btn-primary text-xs xxs:text-[14px] sm:text-[16px]"
-              href="#portfolio"
-            >
-              My Research
-            </a>
-            <a
-              className={`btn xxs:btn-lg px-6 max-xs:px-2 xxs:py-3 hover:border-picto-primary bg-white duration-300 transition-all hover:text-picto-primary  ms-4 text-xs xxs:text-[14px] sm:text-[16px]`}
-              href="#!"
-              download
-            >
-              <FontAwesomeIcon icon={faDownload} /> Download CV
-            </a>
-          </div>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Synthesis & Energy Storage</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Investigating solid-state battery electrolytes, polymer composites, and nanomaterials synthesis to solve fundamental energy storage bottlenecks.
+          </p>
         </div>
+
+        {/* Pillar 3 */}
+        <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="w-12 h-12 rounded-xl bg-purple-100 text-picto-primary flex items-center justify-center mb-4 text-xl">
+            <FontAwesomeIcon icon={faGraduationCap} />
+          </div>
+          <h3 className="font-bold text-gray-900 text-lg mb-2">Academic & Career Aspirations</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Actively seeking international research internships and PhD opportunities to pursue advanced doctoral studies in computational materials engineering.
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center pt-4">
+        <a
+          className="btn btn-primary text-white font-semibold px-8 py-3 rounded-xl shadow-md inline-flex items-center gap-2 hover:scale-105 transition-transform"
+          href="#portfolio"
+        >
+          Explore Research Projects
+          <FontAwesomeIcon icon={faArrowRight} />
+        </a>
       </div>
     </div>
   );
