@@ -4,22 +4,22 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "./blog.css";
 import MonoBlog from "./MonoBlog";
 
-// Breakpoints for swiperJS
+// Responsive breakpoints for Swiper finger sliding
 const custom_breakpoints = {
+  320: {
+    slidesPerView: 1.15,
+    spaceBetween: 16,
+  },
   640: {
-    slidesPerView: 2,
-    spaceBetween: 15,
+    slidesPerView: 2.15,
+    spaceBetween: 20,
   },
-  768: {
+  1024: {
     slidesPerView: 3,
-    spaceBetween: 15,
-  },
-  1220: {
-    slidesPerView: 4,
     spaceBetween: 24,
   },
 };
@@ -35,6 +35,8 @@ const Blog = () => {
       </div>
       <Swiper
         grabCursor={true}
+        allowTouchMove={true}
+        simulateTouch={true}
         breakpoints={custom_breakpoints}
         pagination={{ clickable: true }}
         modules={[Pagination]}
