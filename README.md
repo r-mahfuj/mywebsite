@@ -1,47 +1,52 @@
-# Picto - Personal Portfolio Free Template
+# Mahfujur Rahman — Academic & Research Portfolio
 
-#### Preview
+Personal academic and research portfolio of **Mahfujur Rahman**, a Materials and Metallurgical Engineering researcher at Bangladesh University of Engineering and Technology (BUET). Specializing in nanomaterials, solid-state battery electrolytes, polymer composites, and computational materials engineering (DFT, VASP, LAMMPS).
 
-- [Demo](https://themewagon.github.io/picto/)
+🌐 **Live Website:** [https://r-mahfuj.github.io/mywebsite/](https://r-mahfuj.github.io/mywebsite/)
 
-#### Download
+---
 
-- [Download from ThemeWagon](https://themewagon.com/themes/picto)
+## 🛠️ Tech Stack
 
-## Getting Started
+- **Framework:** React 19, Vite 6
+- **Styling:** Tailwind CSS 4, DaisyUI 5
+- **Icons & Animation:** FontAwesome 6, Swiper JS, Framer Motion
+- **Deployment:** GitHub Pages (`gh-pages`)
 
-1. Clone Repository
+---
 
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/r-mahfuj/mywebsite.git
+cd mywebsite
 ```
-git clone https://github.com/themewagon/picto.git
+
+### 2. Install Dependencies
+```bash
+npm install
 ```
 
-2. Install Dependencies
-
-```
-npm i
-```
-
-3. Run the development server:
-
+### 3. Run Development Server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-## Author
-
+### 4. Build & Preview Locally
+```bash
+npm run build
+npm run preview
 ```
-Developed by ThemeWagon and development team.
+
+### 5. Deploy to GitHub Pages
+```bash
+npm run deploy
 ```
 
-## License
+---
 
-- Design and Code is Copyright &copy; <a href="http://themewagon.com/" target="_blank">ThemeWagon</a>
-- Licensed cover under [MIT]
-- Developed by <a href="http://themewagon.com/" target="_blank">ThemeWagon</a>
+## 📄 Credits & License
+
+- Base portfolio template design by [ThemeWagon](https://themewagon.com/).
+- Customized & maintained by **Mahfujur Rahman** ([@r-mahfuj](https://github.com/r-mahfuj)).
