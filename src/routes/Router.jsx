@@ -5,6 +5,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Main = lazy(() => import("../layouts/Main"));
 const Journals = lazy(() => import("../pages/Journals"));
 const Conferences = lazy(() => import("../pages/Conferences"));
+const ProjectDetails = lazy(() => import("../pages/ProjectDetails"));
 
 const repoName = import.meta.env.VITE_REPO_NAME || "";
 
@@ -29,6 +30,10 @@ export const router = createBrowserRouter(
         {
           path: "/conferences",
           element: <Conferences></Conferences>,
+        },
+        {
+          path: "/project/:projectId",
+          element: <ProjectDetails />,
         },
       ],
     },

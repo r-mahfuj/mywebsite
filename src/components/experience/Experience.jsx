@@ -7,9 +7,9 @@ const experiences = [
     company: "Billah Multifunctional Nanomaterials Group",
     duration: "Ongoing Research Experience",
     description: [
-      "Conducting cutting-edge research in the synthesis and characterization of advanced nanomaterials for energy applications.",
-      "Operating high-precision laboratory equipment and assisting in the development of novel polymer composites and solid-state electrolytes.",
-      "Collaborating with a team of researchers to analyze structural properties and optimize material performance at the nanoscale."
+      "Conducting cutting-edge computational materials engineering research focusing on semiconductor alloys and high-throughput materials discovery.",
+      "Developing machine learning surrogate models (XGBoost) trained on Density Functional Theory (Quantum Espresso) calculations to instantly predict SiGe electronic bandgaps and formation enthalpies.",
+      "Utilizing pymatgen for supercell construction and structural relaxation pipelines, and matminer for extracting ML-ready physical descriptors."
     ],
     image: nanoLabImage,
   },

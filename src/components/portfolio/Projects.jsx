@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Projects = ({ data }) => {
+  const isInternal = data?.link?.startsWith("/");
+
   return (
     <div className="max-w-106 rounded-lg outline-[#FFFFFF] hover:shadow-2xl duration-300 transition-all shadow-gray-300 border border-gray-200">
       <img src={data?.image} alt={`${data?.title} image`} />
@@ -16,16 +19,29 @@ const Projects = ({ data }) => {
         >
           {data?.description}
         </p>
-        <a
-          href={data?.link}
-          className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full"
-        >
-          View Details
-          <span className="ms-1 xs:ms-3">
-            <FontAwesomeIcon icon={faArrowRight} size="l" className="" />
-          </span>
-        </a>
-        {/* </p> */}
+        {isInternal ? (
+          <Link
+            to={data?.link}
+            className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full inline-flex items-center justify-center"
+          >
+            View Details
+            <span className="ms-1 xs:ms-3">
+              <FontAwesomeIcon icon={faArrowRight} size="l" />
+            </span>
+          </Link>
+        ) : (
+          <a
+            href={data?.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn hover:border-picto-primary hover:text-picto-primary bg-white text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 mt-5 xs:py-5.75 px-6 max-sm:w-full inline-flex items-center justify-center"
+          >
+            View Details
+            <span className="ms-1 xs:ms-3">
+              <FontAwesomeIcon icon={faArrowRight} size="l" />
+            </span>
+          </a>
+        )}
       </div>
     </div>
   );

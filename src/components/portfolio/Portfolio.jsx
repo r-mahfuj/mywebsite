@@ -9,11 +9,11 @@ import card6 from "../../assets/images/portfolio-images/card-6.png";
 const projectData = [
   {
     id: 1,
-    image: card1,
-    category: "NANOMATERIALS",
-    title: "Project 1",
-    description: "Investigated novel CVD methods for high-yield carbon nanotube production with enhanced tensile strength.",
-    link: "#!",
+    image: card4,
+    category: "COMPUTATIONAL MATERIALS & ML",
+    title: "SiGe-ML-Surrogate",
+    description: "An ML surrogate model (XGBoost) that mimics Density Functional Theory (Quantum Espresso) to instantly predict SiGe alloy bandgaps, formation enthalpy, and relaxed lattice parameters.",
+    link: "/project/sige-ml-surrogate",
   },
   {
     id: 2,
