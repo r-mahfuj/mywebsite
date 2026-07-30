@@ -12,7 +12,7 @@ const projectDetailsData = {
     author: "Mahfujur Rahman",
     affiliation: "Undergraduate Researcher, Materials & Metallurgical Engineering, BUET",
     githubUrl: "https://github.com/r-mahfuj/SiGe-ML-Surrogate",
-    image: card4,
+    image: null,
     tags: ["Computational Materials", "Machine Learning", "Density Functional Theory", "Semiconductors"],
     overview: "Silicon (Si) and Germanium (Ge) form the backbone of modern microelectronics, optoelectronics, and solar cells. By tuning the composition of Si₁₋ₓGeₓ alloys, researchers can tailor physical properties like the electronic bandgap. However, traditional Density Functional Theory (DFT) calculations using Quantum Espresso are computationally expensive and slow.",
     goal: "This project develops an XGBoost machine learning surrogate model trained on relaxed DFT outputs to predict electronic and structural properties in milliseconds instead of hours, enabling rapid screening of thousands of alloy configurations.",
@@ -127,9 +127,11 @@ const ProjectDetails = () => {
           </div>
 
           {/* Project Featured Image */}
-          <div className="rounded-xl overflow-hidden mb-12 shadow-md max-h-[400px]">
-            <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-          </div>
+          {project.image && (
+            <div className="rounded-xl overflow-hidden mb-12 shadow-md max-h-[400px]">
+              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+            </div>
+          )}
 
           {/* Overview & Motivation */}
           <div className="mb-12">
