@@ -1,7 +1,6 @@
 import {
   faEnvelope,
   faLocationDot,
-  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import Address from "./Address";
 import Form from "./Form";
@@ -17,11 +16,6 @@ const addressData = [
     icon: faEnvelope,
     title: "My Email",
     description: "rahmanmahfuj013@gmail.com",
-  },
-  {
-    icon: faPhone,
-    title: "Call Me Now",
-    description: "+1 (555) 123-4567",
   },
 ];
 
